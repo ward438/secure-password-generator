@@ -6,8 +6,7 @@ Thank you for your interest in the " Secure Password Generator". This works by a
 width="500px"/>
 
 Deployed site:
-https://r-n-g.s3.us-east-2.amazonaws.com/index.html
-
+<a href="https://r-n-g.s3.us-east-2.amazonaws.com/index.html">View Page</a>
 
 
 github url:
