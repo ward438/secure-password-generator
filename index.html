@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Password Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Random Password Generator</h1>
+      </header>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h2>Generate a Password</h2>
+            </div>
+            <div class="card-body">
+              <textarea
+                readonly
+                id="password"
+                placeholder="Please select the appropriate check box. Numeric for numbers, Special for special characters, Uppercase for uppercase letter, and Lowercase for lowercase letters. Enter the amount of characters you require. There is a 8-128 character limit "
+                aria-label="Generated Password"
+              ></textarea>
+              <div class="gradient">
+                <form id="formElem">
+                  <input
+                    id="lengthOfPassword"
+                    type="number"
+                    name="lengthOfPassword"
+                    min="8"
+                    max="128"
+                    value="8"
+                    onfocusout="myCallbacks.ensureMinAndMax()"
+                  />
+                  <div class="data">
+                    <span>
+                      <input name="characterType" type="checkbox" value="num" />
+                      <label>Numeric</label>
+                    </span>
+                    <span>
+                      <input
+                        name="characterType"
+                        type="checkbox"
+                        value="specialChar"
+                      />
+                      <label>Special</label>
+                    </span>
+
+                    <span>
+                      <input
+                        name="characterType"
+                        type="checkbox"
+                        value="upperChar"
+                      />
+                      <label>Uppercase</label>
+                    </span>
+                    <span>
+                      <input
+                        name="characterType"
+                        type="checkbox"
+                        value="lowChar"
+                      />
+                      <label>Lowercase</label>
+                    </span>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="card-footer">
+              <!--created generatedPasswork for id-->
+              <button id="generate" class="btn">Password</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
